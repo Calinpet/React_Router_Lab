@@ -1,7 +1,6 @@
 import React from "react";
 
 function Stock(props) {
-  
     const stock = props.allStocks.filter(data => data.symbol === props.match.params.symbol)[0]
     return (
       <div>

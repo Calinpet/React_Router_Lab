@@ -6,7 +6,8 @@ import About from './pages/About';
 import Dashboard from './pages/Dashboard';
 import { Route, Switch } from 'react-router-dom';
 import Nav from './components/Nav';
-import Stocks from './components/stock-data';
+import stocks from './components/stock-data';
+import Stock from './pages/Stock';
 
 import './App.css';
 
@@ -25,7 +26,7 @@ function App() {
         
         <Route 
         path="/stocks/:symbol"
-        render={(routerProps) => <Stocks {...routerProps} />}
+        render={(routerProps) => <Stock allStocks={stocks} {...routerProps} />}
       />
         <Route path='/stocks'><Dashboard /></Route>
       </Switch>
